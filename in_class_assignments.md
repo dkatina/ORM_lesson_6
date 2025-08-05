@@ -88,10 +88,7 @@ from datetime import datetime
 engine = create_engine('sqlite:///database.db', echo=True)
 Base.metadata.create_all(engine)
 Session = sessionmaker(bind=engine)
-
-with Session() as session:
-    # Your code here
-    session.commit()
+session = Session()
 ```
 
 ### Common Relationship Types:
